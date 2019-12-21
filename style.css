@@ -1,0 +1,88 @@
+/*css variable*/
+:root{
+	--primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba (104,104,104,0.8);
+}
+html{
+	box-sizing: border-box;
+	font-family: arial,helvetica,sans-serif;
+	color: var(--dark);
+}
+body {
+	background :#ccc;
+	margin:30px 50px;
+	line-height: 1.4;
+}
+.btn{
+	background: var(--dark);
+	color: var (--light);
+	padding:0.6rem 1.3rem;
+	text-decoration: none;
+	border: none;
+}
+img{
+	max-width: 100%;
+}
+
+.wrapper{
+	display: grid;
+	grid-gap:20px;
+}
+
+/*Navigation*/
+.main-nav ul{
+	display: grid;
+	grid-gap: 20px;
+	padding: 0;
+	list-style: none;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.main-var a {
+	background: var(--primary);
+	display: block;
+	text-decoration: none;
+	padding: 0.8 rem;
+	text-align: center;
+	color: var(--dark);
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	box-shadow: var(--shadow);
+}
+
+.main-var a : hover{
+background: var(--dark);
+color: var(--light);
+}
+/*top container*/
+.top-container{
+	display: grid;
+	grid-gap:20px;
+	grid-template-areas:
+	'showcase showcase top-box-a'
+	'showcase showcase top-box-b';
+}
+/*showcase*/
+
+.showcase {
+	grid-area: showcase;
+	min-height: 400px;
+	background: url(img/showcase.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction:column;
+	align-items: start;
+	justify-content:center;
+	box-shadow: var(--shadaw);
+}
+
+.top-box-a{
+	grid-are :top-box-a; 
+}
+.top-box-b{
+	grid-area:top-box-b;
+}
